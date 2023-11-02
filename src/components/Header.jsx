@@ -1,5 +1,5 @@
 import React from 'react'
-// import emoji from '../assests/29 29.png'
+import emoji from '../assets/29 29.png'
 import { TypeAnimation } from 'react-type-animation';
 
 
@@ -41,7 +41,7 @@ export const Header= () => {
             </div>
         </div>
         <div className=' rounded-full h-64 w-64 mx-auto mt-3 md:mt-0 md:mx-0 bg-slate-700'>
-            <img src='../assests/29 29.png' alt=" emoji character"  className=' w-64 h-64'/>
+            <img src={emoji} alt=" emoji character"  className=' w-64 h-64'/>
             {/* <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 100 100"

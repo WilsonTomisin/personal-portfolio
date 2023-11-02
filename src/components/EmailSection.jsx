@@ -1,35 +1,23 @@
-"use client"
-import React from 'react'
+import React,{ useRef} from 'react'
 import { BsGithub,BsTwitter,BsMedium} from 'react-icons/bs'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import emailjs from '@emailjs/browser';
 
 export const EmailSection = () => {
 
-  const handleSubmit = async(event)=>{
+  const form = useRef();
+
+  const handleSubmit = (event)=>{
       event.preventDefault();
-      // const data={
-      //   email: event.target.email.value,
-      //   subject:event.target.subject.value,
-      //   message: event.target.message.value
-      // }
-      // const JSON_DATA = JSON.stringify(data)
-      // const endPoint ='api/send'
+      emailjs.sendForm( 'service_dqxqmpc' ,'template_x9gj34i' , form.current, 'nDmRFN6-76YWClrOJ')
+      .then((result) => {
+          console.log(result.text);
+          console.log('sent')
+      }, (error) => {
+          console.log(error.text);
+      });
 
-      // const options ={
-      //   method:'POST',
-      //   headers:{
-      //     'Content-Type':'application/json'
-      //   },
-      //   body: JSON_DATA
-
-      // }
-      // const response = await fetch(endPoint,options)
-      // // const resData = await response.json()
-      // console.log(response);
-
-      // if (response.status == 200) {
-      //   console.log('message sent');
-      // }
+      
 
   }
   return (
@@ -55,12 +43,12 @@ export const EmailSection = () => {
         </div>
       </div>
       <div className=' w-full md:w-1/2'>
-        <form onSubmit={handleSubmit} className=' text-white flex flex-col gap-4'>
+        <form ref={form} onSubmit={handleSubmit} className=' text-white flex flex-col gap-4'>
             <div className=' mb-5'>
-              <label htmlFor="email" className=' font-semibold'>Email address</label>
+              <label htmlFor="userName" className=' font-semibold'>Name</label>
               <br/>
-              <br/>
-              <input type="email" name="email" placeholder='enter email address' className=' px-2 py-1 bg-slate-700 w-full border-2 border-slate-500'/>
+              <br />
+              <input type="text" name='userName' placeholder='your name' className=' px-2 py-1 w-full bg-slate-700 border-2 border-slate-500'/>
             </div>
             <div className=' mb-5'>
               <label htmlFor="subject" className=' font-semibold'>Subject</label>

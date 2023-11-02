@@ -1,14 +1,13 @@
 import React from 'react';
 import { ProjectCard } from './ProjectCard';
-// import image1 from ;
-// import image2 from '../assests/project2.jpg';
-// import image3 from '../assests/project3.jpg';
-// import image4 from '../assests/project4.jpg';
-// import image5 from '../assests/project5.jpg';
-// import image6 from '../assests/project6.jpg';
+import image1 from '../assets/project1.jpeg' ;
+import image2 from '../assets/project2.jpeg';
+import image3 from '../assets/project3.jpeg';
+import image4 from '../assets/project4.jpeg';
+import image5 from '../assets/project5.jpeg';
+import image6 from '../assets/project6.jpeg';
 import { SiJavascript,  SiMui} from 'react-icons/si';
-import {AiFillHtml5,AiFillApi} from 'react-icons/ai'
-import { TbDragDrop2} from 'react-icons/tb'
+import {AiFillHtml5} from 'react-icons/ai'
 import { BiLogoCss3 ,BiLogoTailwindCss,BiLogoReact, BiLogoFirebase} from 'react-icons/bi';
 
 
@@ -20,7 +19,7 @@ export const ProjectSection = () => {
     const Project_Data = [
         {
             id:100,
-            path: '../assests/project1.jpg',
+            path: image1,
             title: 'Simple Bookmark manager ',
             liveURL:'https://wilsontomisin-bookmark-page.netlify.app/',
             repo:'https://github.com/WilsonTomisin/bookmark-landing-page',
@@ -33,7 +32,7 @@ export const ProjectSection = () => {
         },
         {
             id:200,
-            path: '../assests/project2.jpg',
+            path: image2,
             title: ' Photo Gallery',
             liveURL:'https://wilsontomisin-imagegallery.netlify.app/',
             repo:'https://github.com/WilsonTomisin/hng-task3',
@@ -46,7 +45,7 @@ export const ProjectSection = () => {
         },
         {
             id:300,
-            path: '../assests/project3.jpg',
+            path: image3,
             title: ' Movie Box',
             liveURL:'https://wilsontomisin-moviebox.netlify.app/',
             repo:"https://github.com/WilsonTomisin/hng-task2",
@@ -59,7 +58,7 @@ export const ProjectSection = () => {
         },
         {
             id:400,
-            path: '../assests/project4.jpg',
+            path: image4,
             title: ' Youtube Clone',
             liveURL:'https://wilsontomisin-youtubeclone.netlify.app/',
             repo:"https://github.com/WilsonTomisin/youtube-clone",
@@ -72,7 +71,7 @@ export const ProjectSection = () => {
         },
         {
             id:500,
-            path: '../assests/project5.jpg',
+            path: image5,
             title: 'Quiz Game',
             liveURL:'https://wilsontomisin.github.io/QuizGame/',
             repo:'https://github.com/WilsonTomisin/QuizGame',
@@ -85,7 +84,7 @@ export const ProjectSection = () => {
         },
         {
             id:600,
-            path: '../assests/project6.jpeg',
+            path: image6,
             title: ' Todo App',
             liveURL:'https://wilsontomisin-todo-app.netlify.app/',
             repo:'https://github.com/WilsonTomisin/todo-app-challenge',
@@ -101,7 +100,7 @@ export const ProjectSection = () => {
     <div >
         <h1 className=' text-center text-4xl font-bold text-white mb-20'>My Projects</h1>
         <div className=' grid grid-cols-1 md:grid-cols-3 gap-5'>
-            {Project_Data.map((project, index)=>{
+            {Project_Data.map((project)=>{
 
                 return(
                     <>
