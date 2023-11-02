@@ -42,7 +42,7 @@ export const EmailSection = () => {
           </Link>
         </div>
       </div>
-      <div className=' w-full md:w-1/2'>
+      <div className=' w-full md:w-1/2 py-20 md:py-0'>
         <form ref={form} onSubmit={handleSubmit} className=' text-white flex flex-col gap-4'>
             <div className=' mb-5'>
               <label htmlFor="userName" className=' font-semibold'>Name</label>
@@ -50,6 +50,12 @@ export const EmailSection = () => {
               <br />
               <input type="text" name='userName' placeholder='your name' className=' px-2 py-1 w-full bg-slate-700 border-2 border-slate-500'/>
             </div>
+            <div className=' mb-5'>
+              <label htmlFor="email" className=' font-semibold'>Email address</label>
+              <br/>
+              <br/>
+              <input type="email" name="email" placeholder='enter email address' className=' px-2 py-1 bg-slate-700 w-full border-2 border-slate-500'/>
+            </div> 
             <div className=' mb-5'>
               <label htmlFor="subject" className=' font-semibold'>Subject</label>
               <br/>
@@ -61,8 +67,6 @@ export const EmailSection = () => {
               <br />
               <br />
               <textarea name="message" rows="10" placeholder='send a message....' className=' w-full p-4  bg-slate-700 border-2 border-slate-500' ></textarea>
-
-            
             </div>
             <div>
               <button type='submit' className=' w-full px-4 py-2 bg-green-500 rounded-lg'>Send message!</button>

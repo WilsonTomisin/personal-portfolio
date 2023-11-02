@@ -14,7 +14,9 @@ function App() {
       <div className=" container mx-auto mt-[100px]">
         <Routes>
             <Route path="/" element={<Homepage/>}/>
-
+            <Route path="/about" element={<AboutSection/>}/>
+            <Route path="/contact" element={<EmailSection/>}/>
+            <Route path="/projects" element={<ProjectSection/>}/>
         </Routes>
       </div>
       <Footer/>

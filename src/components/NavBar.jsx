@@ -6,9 +6,9 @@ import {AiOutlineCloseSquare} from 'react-icons/ai'
 import { Link } from 'react-router-dom'
 
 export const linkItems=[
-    {name:'Contact Me', path: '#contact'},
-    {name:'Projects', path:'#projects'},
-    {name:'About me', path:'#about'}
+    {name:'Contact Me', path: '/contact'},
+    {name:'Projects', path:'/projects'},
+    {name:'About me', path:'/about'}
 ]
 
 export const NavBar = () => {
