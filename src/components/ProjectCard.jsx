@@ -28,10 +28,10 @@ export const ProjectCard = ({url,title,description,stack, key, liveURL,repo}) =>
                 ))}
             </div>
             <div className=' flex items-center justify-center text-xl font-bold '>
-                <Link href={liveURL} className=' mr-6 border-4 p-2 border-white transition-all duration-700 ease-in-out hover:bg-green-500 hover:border-green-600 rounded-full'>
+                <Link to={liveURL} className=' mr-6 border-4 p-2 border-white transition-all duration-700 ease-in-out hover:bg-green-500 hover:border-green-600 rounded-full'>
                     <BsEye/>
                 </Link>
-                <Link href={repo} className=' border-4 p-2 border-white transition-all duration-700 ease-in-out hover:bg-green-500 hover:border-green-600 rounded-full'>
+                <Link to={repo} className=' border-4 p-2 border-white transition-all duration-700 ease-in-out hover:bg-green-500 hover:border-green-600 rounded-full'>
                     <BsCodeSlash/>
                 </Link>
 
