@@ -11,7 +11,7 @@ const tabs = [
       <li className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-semibold text-sm hover:bg-white px-4 py-1 rounded-lg text-slate-950'>Javascript</li>
       <li className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-semibold text-sm hover:bg-white px-4 py-1 rounded-lg text-slate-950'>React Js</li>
       <li className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-semibold text-sm hover:bg-white px-4 py-1 rounded-lg text-slate-950'>Git and Github</li>
-      <li className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-semibold text-sm hover:bg-white px-4 py-1 rounded-lg text-slate-950'>Next js</li>
+      <li className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-semibold text-sm hover:bg-white px-4 py-1 rounded-lg text-slate-950'>Framer motion</li>
       <li className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-semibold text-sm hover:bg-white px-4 py-1 rounded-lg text-slate-950'>Tailwind Css</li>
     </ul>
    ]},
@@ -50,17 +50,13 @@ export const AboutSection = () => {
         <div className=' w-full md:w-1/2'>
           <h2 className=' my-4 text-3xl font-semibold text-white text-left '>About Me</h2>
             <p className=' text-white text-sm leading-9 text-left md:text-lg'>
-                Lorem ipsum dolor sit amet consectetur,
-                adipisicing elit. Odit veritatis sequi
-                quae aliquam dolorum, quas possimus, 
-                deserunt esse hic, voluptate harum 
-                voluptatem quam porro? Quibusdam 
-                deleniti beatae ad adipisci vero 
-                reprehenderit nobis temporibus magnam,
-                facilis necessitatibus qui perspiciatis
-                voluptas sunt voluptatem amet ab commodi
-                suscipit mollitia sint cupiditate 
-                assumenda iure?
+              Frontend development is where my creative and analytical sides converge.
+              I find joy in crafting visually appealing and functional websites 
+              that not only meet the user's needs but also leave a lasting impression.
+              Whether it's coding responsive layouts, enhancing user interfaces
+              with smooth animations, or diving into the world of web accessibility, 
+              I'm always eager to learn and grow.This portfolio is a showcase of my projects,
+              skills, and dedication to my craft. Take a tour through the projects I've worked on .
             </p>
             <div className=' w-1/2 flex flex-row  mt-8  text-slate-600'>
 

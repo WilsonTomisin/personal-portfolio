@@ -28,9 +28,9 @@ export const Header= () => {
                 />
             </h1>
             <p className=' text-gray-400 text-lg mb-6'>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                Maiores harum doloribus sed suscipit laborum accusamus fugiat, 
-                optio corrupti. Iusto, corporis.
+            Hello, and thank you for visiting my portfolio website. 
+            I'm  a passionate and aspiring  frontend developer 
+            on a journey to turn ideas into interactive and user-friendly web experiences.
             </p>
             <div>
               <button className=' bg-gradient-to-br from-green-500 via-blue-500 to-blue-950 px-6 py-3 rounded-full mr-4'>Hire Me</button>

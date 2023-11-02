@@ -68,8 +68,8 @@ export const EmailSection = () => {
               <br />
               <textarea name="message" rows="10" placeholder='send a message....' className=' w-full p-4  bg-slate-700 border-2 border-slate-500' ></textarea>
             </div>
-            <div>
-              <button type='submit' className=' w-full px-4 py-2 bg-green-500 rounded-lg'>Send message!</button>
+            <div className='wrapper'>
+              <button type='submit' className=' send-btn w-full px-4 py-2 bg-green-500 rounded-lg'>Send message!</button>
             </div>
         </form>
       </div>
