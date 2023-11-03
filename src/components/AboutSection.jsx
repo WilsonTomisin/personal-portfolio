@@ -1,5 +1,6 @@
 import React,{ useState} from 'react'
 import portfolio from '../assets/portfolio.jpeg'
+import './aboutsection.css';
 
 
 const tabs = [
@@ -63,16 +64,16 @@ export const AboutSection = () => {
               {
                 tabs.map((tab, index)=>{
                   const active = tab.name === tabButton
-                  const activeBtn = active ? ' text-white border-b-2 border-green-500 ' : ' '
+                  const activeBtn = active ? ' text-white  ' : ' '
                   return(
                       <div className=' flex flex-col' key={index}>
                           <button value={tab.name}
                           onClick={(e)=>setTabButton(e.currentTarget.value)}
-                          className={`mr-3 font-semibold hover:text-green-500 ${activeBtn}`}
+                          className={`skills-btn mr-3 font-semibold px-3  ${activeBtn}`}
                           >
                           {tab.name}
                           </button>
-                          <div className=' mt-3 '>
+                          <div className=' mt-5 '>
                             {active && tab.content}
                           </div>
                       </div>
