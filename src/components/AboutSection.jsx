@@ -1,35 +1,70 @@
 import React,{ useState} from 'react'
 import portfolio from '../assets/portfolio.jpeg'
 import './aboutsection.css';
+import { motion } from 'framer-motion';
+
+
+
+
+
+const boxVariant={
+
+  fadeIn:{
+    x:0,
+    opacity:1,
+    transition:{
+      when:'beforeChildren',
+      staggerChildren:0.3
+    }
+  },
+  hidden:{
+    x:-1000,
+    opacity:0.5,
+  }
+}
+const boxItems ={
+  fadeIn:{
+    x:0,
+    opacity:1,
+    scale: 1
+    
+    
+  },
+  hidden:{
+    x:-100,
+    opacity:0,
+    scale:0.25
+  }
+}
 
 
 const tabs = [
   {name:'Skills',
    content:[
-    <ul>
-      <li className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-semibold text-sm hover:bg-white px-4 py-1 rounded-lg text-slate-950'>HTML</li>
-      <li className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-semibold text-sm hover:bg-white px-4 py-1 rounded-lg text-slate-950'>CSS</li>
-      <li className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-semibold text-sm hover:bg-white px-4 py-1 rounded-lg text-slate-950'>Javascript</li>
-      <li className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-semibold text-sm hover:bg-white px-4 py-1 rounded-lg text-slate-950'>React Js</li>
-      <li className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-semibold text-sm hover:bg-white px-4 py-1 rounded-lg text-slate-950'>Git and Github</li>
-      <li className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-semibold text-sm hover:bg-white px-4 py-1 rounded-lg text-slate-950'>Framer motion</li>
-      <li className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-semibold text-sm hover:bg-white px-4 py-1 rounded-lg text-slate-950'>Tailwind Css</li>
-    </ul>
+    <motion.ul variants={boxVariant} initial='hidden' animate='fadeIn'>
+      <motion.li variants={boxItems} className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-semibold text-sm hover:bg-white px-4 py-1 rounded-lg text-slate-950'>HTML</motion.li>
+      <motion.li variants={boxItems} className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-semibold text-sm hover:bg-white px-4 py-1 rounded-lg text-slate-950'>CSS</motion.li>
+      <motion.li variants={boxItems} className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-semibold text-sm hover:bg-white px-4 py-1 rounded-lg text-slate-950'>Javascript</motion.li>
+      <motion.li variants={boxItems} className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-semibold text-sm hover:bg-white px-4 py-1 rounded-lg text-slate-950'>React Js</motion.li>
+      <motion.li  variants={boxItems} className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-semibold text-sm hover:bg-white px-4 py-1 rounded-lg text-slate-950'>Git and Github</motion.li>
+      <motion.li variants={boxItems} className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-semibold text-sm hover:bg-white px-4 py-1 rounded-lg text-slate-950'>Framer motion</motion.li>
+      <motion.li  variants={boxItems} className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-semibold text-sm hover:bg-white px-4 py-1 rounded-lg text-slate-950'>Tailwind Css</motion.li>
+    </motion.ul>
    ]},
   {name:'Education',
    content: [
-      <ul className=' flex-1'>
-        <li className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-semibold text-sm hover:bg-white px-4 py-1 rounded-lg text-slate-950'>Meta Frontend developer Certificate</li>
-        <li className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-semibold text-sm hover:bg-white px-4 py-1 rounded-lg text-slate-950'>Complete Web developer course by Kalob Taulin</li>
-      </ul>
+      <motion.ul className=' flex-1' variants={boxVariant} initial='hidden' animate='fadeIn'>
+        <motion.li variants={boxItems} className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-semibold text-sm hover:bg-white px-4 py-1 rounded-lg text-slate-950'>Meta Frontend developer Certificate</motion.li>
+        <motion.li variants={boxItems} className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-semibold text-sm hover:bg-white px-4 py-1 rounded-lg text-slate-950'>Complete Web developer course by Kalob Taulin</motion.li>
+      </motion.ul>
    ]
 
   },
   { name:'Experience',
     content:[
-      <ul>
-        <li className=' bg-green-500 cursor-pointer mb-3 font-semibold text-sm duration-100 transition-colors ease-in-out  hover:bg-white px-4 py-1 rounded-lg text-slate-950'>HNG intern 2023</li>
-      </ul>
+      <motion.ul variants={boxVariant} initial='hidden' animate='fadeIn'>
+        <motion.li variants={boxItems} className=' bg-green-500 cursor-pointer mb-3 font-semibold text-sm duration-100 transition-colors ease-in-out  hover:bg-white px-4 py-1 rounded-lg text-slate-950'>HNG intern 2023</motion.li>
+      </motion.ul>
     ]
   }
 ]
