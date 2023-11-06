@@ -80,7 +80,7 @@ export const AboutSection = () => {
   },[tabButton])
   return (
     <section className=' flex flex-col md:flex-row  justify-between py-32'>
-        <div className=' w-full md:w-1/2'>
+        <div className=' h-auto w-full md:w-1/2'>
             <img src={portfolio} alt='my-porfile-picture'  className=' h-auto w-full md:w-4/6 duration-500 transition-all ease-in-out rounded-lg hover:scale-95'/>
         </div>
         <div className=' w-full md:w-1/2'>
