@@ -20,17 +20,31 @@ export const EmailSection = () => {
 
   const form = useRef();
 
+  const [formData, setformData] = React.useState({
+    userName: '',
+    message: '',
+    subject:''
+  })
+
+  const handleChange = (e)=>{
+    const {name,value} = e.target
+    setformData({
+        ...formData,
+        [name]: value
+    })
+  }
+
   const handleSubmit = (event)=>{
       event.preventDefault();
-      // emailjs.sendForm( 'service_dqxqmpc' ,'template_x9gj34i' , form.current, 'nDmRFN6-76YWClrOJ')
-      // .then((result) => {
-      //     console.log(result.text);
-      //     console.log('sent')
-      // }, (error) => {
-      //     console.log(error.text);
-      // });
-      console.log('sent');
+      emailjs.sendForm( 'service_dqxqmpc' ,'template_x9gj34i' , form.current, 'nDmRFN6-76YWClrOJ')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+      // console.log('sent');
       notify()
+      setformData({...formData,message:'',userName:'',subject:''})
     }
 
   return (
@@ -60,20 +74,23 @@ export const EmailSection = () => {
                   <div className=' mb-5'>
                     <label htmlFor="userName" className=' font-semibold'>Name</label>
                     <br/>
-                    <br />
-                    <input type="text" name='userName' required placeholder='your name' className=' px-2 py-1 w-full bg-slate-700 border-2 border-slate-500'/>
+                    <input type="text" name='userName'
+                     value={formData.userName} required onChange={handleChange}
+                     placeholder='your name' className=' px-2 py-1 w-full bg-slate-700 border-2 border-slate-500'/>
                   </div>
                   <div className=' mb-5'>
                     <label htmlFor="subject"  className=' font-semibold'>Subject</label>
                     <br/>
-                    <br />
-                    <input type="text" name='subject' required placeholder='To say hello?' className=' px-2 py-1 w-full bg-slate-700 border-2 border-slate-500'/>
+                    <input type="text" name='subject' 
+                    value={formData.subject} required onChange={handleChange}
+                    placeholder='To say hello?' className=' px-2 py-1 w-full bg-slate-700 border-2 border-slate-500'/>
                   </div>
                   <div>
                     <label htmlFor="message"  className=' font-semibold'>Message</label>
                     <br />
-                    <br />
-                    <textarea name="message" required rows="10" placeholder='send a message and please include how i can reach out also....' className=' w-full p-4  bg-slate-700 border-2 border-slate-500' ></textarea>
+                    <textarea name="message" value={formData.message} onChange={handleChange}
+                    required rows="7" placeholder='send a message and please include how i can reach out also....'
+                     className=' w-full p-4  bg-slate-700 border-2 border-slate-500' ></textarea>
                   </div>
                   <div className='wrapper'>
                     <button type='submit' className=' send-btn w-full px-4 py-2 bg-green-500 rounded-lg'>Send message!</button>
