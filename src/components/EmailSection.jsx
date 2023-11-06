@@ -1,4 +1,5 @@
 import React,{ useRef} from 'react' ;
+import './button.css'
 import { BsGithub,BsTwitter,BsMedium} from 'react-icons/bs';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -93,7 +94,13 @@ export const EmailSection = () => {
                      className=' w-full p-4  bg-slate-700 border-2 border-slate-500' ></textarea>
                   </div>
                   <div className='wrapper'>
-                    <button type='submit' className=' send-btn w-full px-4 py-2 bg-green-500 rounded-lg'>Send message!</button>
+                    <button type='submit' className=' send-btn w-full px-4 py-2 font-semibold rounded-lg'>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      Send message!
+                    </button>
                   </div>
           </form>
           <ToastContainer/>
