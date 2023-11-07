@@ -94,12 +94,12 @@ export const EmailSection = () => {
                      className=' w-full p-4  bg-slate-700 border-2 border-slate-500' ></textarea>
                   </div>
                   <div className='wrapper'>
-                    <button type='submit' className=' send-btn w-full px-4 py-2 font-semibold rounded-lg'>
+                    <button type='submit' className=' send-btn w-full px-4 py-2 font-semibold rounded-md'>
                       <span></span>
                       <span></span>
                       <span></span>
                       <span></span>
-                      Send message!
+                      Send message
                     </button>
                   </div>
           </form>

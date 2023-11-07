@@ -8,7 +8,7 @@
       position: absolute;
       height: 3px;
       width: 0%;
-      background-color: limegreen;
+      background: linear-gradient(90deg , darkblue , lime);;
       left: 0;
       bottom: -10px;
       transition: all .5s ease-in-out;
