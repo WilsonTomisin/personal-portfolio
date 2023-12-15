@@ -29,7 +29,7 @@ export const Header= () => {
             </h1>
             <p className=' text-gray-400 text-lg mb-6'>
             Hello, and thank you for visiting my portfolio website. 
-            I'm  a passionate and aspiring  frontend developer 
+            I'm  a passionate frontend developer 
             on a journey to turn ideas into interactive and user-friendly web experiences.
             </p>
             <div>
