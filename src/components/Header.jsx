@@ -1,13 +1,24 @@
 import React from 'react'
 import emoji from '../assets/29 29.png'
 import { TypeAnimation } from 'react-type-animation';
+import { Link } from 'react-router-dom';
 
 
 
 export const Header= () => {
+  const downloadFile=()=>{
+      // Create an anchor element dynamically
+      const link = document.createElement('a');
+      link.href = "../assets/resume.pdf";
+      link.download = "resume.pdf";
+
+      // Simulate a click on the anchor element to initiate download
+      link.click();
+
+  }
   return (
-    <section className=' text-white flex flex-col md:flex-row justify-between'>
-        <div className=' w-full md:w-1/2 text-center md:text-left'>
+    <section className=' text-white flex flex-col md:flex-row justify-between py-[30px]'>
+        <div className=' w-full md:w-1/2 text-center md:text-left '>
             <h1 className=' text-5xl md:text-6xl font-bold text-white  mb-4'>
                 <span className=' 
                 text-transparent 
@@ -18,7 +29,7 @@ export const Header= () => {
                   sequence={[
                     'Wilson Oluwatomisin',
                     2000,
-                    'a Front-end developer',
+                    'a Web developer',
                     2000,
                   ]}
                   wrapper="span"
@@ -33,8 +44,8 @@ export const Header= () => {
             on a journey to turn ideas into interactive and user-friendly web experiences.
             </p>
             <div>
-              <button className=' bg-gradient-to-br from-green-500 via-blue-500 to-blue-950 px-6 py-3 rounded-full mr-4'>Hire Me</button>
-              <button className=' bg-transparent text-white px-1 py-1 rounded-full bg-gradient-to-r
+              <a href='mailto:tommywilson972@gmail.com' className=' bg-gradient-to-br from-green-500 via-blue-500 to-blue-950 px-6 py-3 rounded-full mr-4'>Hire Me</a>
+              <button onClick={downloadFile} className=' bg-transparent text-white px-1 py-1 rounded-full bg-gradient-to-r
               from-green-500 via-blue-500 to-blue-950 hover:bg-gradient-to-tr '>
                 <span className=' block bg-slate-950 rounded-full px-5 py-2 '>Download CV</span>
               </button>
