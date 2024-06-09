@@ -54,7 +54,7 @@ const tabs = [
   {name:'Education',
    content: [
       <motion.ul className=' flex-1' variants={boxVariant} initial='hidden' animate='fadeIn'>
-        <motion.li variants={boxItems} className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-semibold text-sm hover:bg-white px-4 py-1 rounded-lg text-slate-950'>Meta Frontend developer Certificate</motion.li>
+        <motion.li variants={boxItems} className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-semibold text-sm hover:bg-white px-4 py-1 rounded-lg text-slate-950'>Meta Frontend developer </motion.li>
         <motion.li variants={boxItems} className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-semibold text-sm hover:bg-white px-4 py-1 rounded-lg text-slate-950'>Complete Web developer course by Kalob Taulin</motion.li>
       </motion.ul>
    ]
@@ -64,6 +64,10 @@ const tabs = [
     content:[
       <motion.ul variants={boxVariant} initial='hidden' animate='fadeIn'>
         <motion.li variants={boxItems} className=' bg-green-500 cursor-pointer mb-3 font-semibold text-sm duration-100 transition-colors ease-in-out  hover:bg-white px-4 py-1 rounded-lg text-slate-950'>HNG intern 2023</motion.li>
+        <motion.li variants={boxItems} className=' bg-green-500 cursor-pointer mb-3 font-semibold text-sm duration-100 transition-colors ease-in-out  hover:bg-white px-4 py-1 rounded-lg text-slate-950'>Lead Developer @kuttinedgeresources.com</motion.li>
+        <motion.li variants={boxItems} className=' bg-green-500 cursor-pointer mb-3 font-semibold text-sm duration-100 transition-colors ease-in-out  hover:bg-white px-4 py-1 rounded-lg text-slate-950'> Lead Developer @accessmedical supplies</motion.li>
+
+
       </motion.ul>
     ]
   }
