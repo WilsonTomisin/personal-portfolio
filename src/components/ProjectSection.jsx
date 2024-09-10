@@ -6,9 +6,13 @@ import image3 from '../assets/project3.jpeg';
 import image4 from '../assets/project4.jpeg';
 import image5 from '../assets/project5.jpeg';
 import image6 from '../assets/project6.jpeg';
+import image7 from '../assets/project7.png';
+import image8 from '../assets/project8.png'
 import { SiJavascript,  SiMui} from 'react-icons/si';
 import {AiFillHtml5} from 'react-icons/ai'
 import { BiLogoCss3 ,BiLogoTailwindCss,BiLogoReact, BiLogoFirebase} from 'react-icons/bi';
+import { SiNextdotjs } from "react-icons/si";
+
 
 
 
@@ -19,6 +23,32 @@ export const ProjectSection = () => {
     const Project_Data = [
         {
             id:100,
+            path: image8,
+            title: 'Access medical supplies',
+            liveURL:'https://accessmedsupplies.com',
+            repo:'https://github.com/WilsonTomisin',
+            description: 'An online store for medical products. ',
+            stack:[
+                {name:'Next js', icon:<SiNextdotjs className=' text-blue-600 text-xl '/>},
+                {name:'Tailwindcss',icon:<BiLogoTailwindCss className=' text-blue-300 text-xl'/>},
+                
+            ]
+        },
+        {
+            id:200,
+            path: image7,
+            title: 'Kuttinedge resources ',
+            liveURL:'https://kuttinedgeresources.com/',
+            repo:'https://github.com/WilsonTomisin',
+            description: 'A Landing page for a school visa agency',
+            stack:[
+                {name:'React', icon:<BiLogoReact className=' text-blue-600 text-xl '/>},
+                {name:'Tailwindcss',icon:<BiLogoTailwindCss className=' text-blue-300 text-xl'/>},
+                
+            ]
+        },
+        {
+            id:300,
             path: image1,
             title: 'Simple Bookmark manager ',
             liveURL:'https://wilsontomisin-bookmark-page.netlify.app/',
@@ -31,7 +61,7 @@ export const ProjectSection = () => {
             ]
         },
         {
-            id:200,
+            id:400,
             path: image2,
             title: ' Photo Gallery',
             liveURL:'https://wilsontomisin-imagegallery.netlify.app/',
@@ -44,7 +74,7 @@ export const ProjectSection = () => {
             ]
         },
         {
-            id:300,
+            id:500,
             path: image3,
             title: ' Movie Box',
             liveURL:'https://wilsontomisin-moviebox.netlify.app/',
@@ -57,7 +87,7 @@ export const ProjectSection = () => {
             ]
         },
         {
-            id:400,
+            id:600,
             path: image4,
             title: ' Youtube Clone',
             liveURL:'https://wilsontomisin-youtubeclone.netlify.app/',
@@ -69,21 +99,21 @@ export const ProjectSection = () => {
                 {name:'Material UI', icon:<SiMui className=' text-blue-600 text-xl'/>}
             ]
         },
+        // {
+        //     id:700,
+        //     path: image5,
+        //     title: 'Quiz Game',
+        //     liveURL:'https://wilsontomisin.github.io/QuizGame/',
+        //     repo:'https://github.com/WilsonTomisin/QuizGame',
+        //     description: 'A general Knowlegde quiz that comes with some additional functionalities e.g time-lapse,automatic correction.',
+        //     stack:[
+        //         {name:'HTML', icon:<AiFillHtml5 className=' text-orange-800 text-xl'/>},
+        //         {name:'CSS',icon:<BiLogoCss3 className=' text-blue-600 text-xl'/>},
+        //         {name:'Javascript', icon:<SiJavascript className=' text-yellow-400 text-xl'/>}
+        //     ]
+        // },
         {
-            id:500,
-            path: image5,
-            title: 'Quiz Game',
-            liveURL:'https://wilsontomisin.github.io/QuizGame/',
-            repo:'https://github.com/WilsonTomisin/QuizGame',
-            description: 'A general Knowlegde quiz that comes with some additional functionalities e.g time-lapse,automatic correction.',
-            stack:[
-                {name:'HTML', icon:<AiFillHtml5 className=' text-orange-800 text-xl'/>},
-                {name:'CSS',icon:<BiLogoCss3 className=' text-blue-600 text-xl'/>},
-                {name:'Javascript', icon:<SiJavascript className=' text-yellow-400 text-xl'/>}
-            ]
-        },
-        {
-            id:600,
+            id:800,
             path: image6,
             title: ' Todo App',
             liveURL:'https://wilsontomisin-todo-app.netlify.app/',
