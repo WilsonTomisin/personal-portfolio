@@ -1,11 +1,13 @@
 import React from 'react'
 import { BsCodeSlash,BsEye} from 'react-icons/bs';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 
 export const ProjectCard = ({url,title,description,stack, key, liveURL,repo}) => {
+    // let newKey = key/50
   return (
-    <div key={key} className=' h-auto w-auto cursor-pointer text-white bg-slate-900 rounded-lg duration-500 transition-all ease-in-out hover:scale-95 '>
+    <div  key={key} className=' h-auto w-auto cursor-pointer text-white bg-slate-900 rounded-lg duration-500 transition-all ease-in-out hover:scale-95 '>
         <div className=' h-auto w-full'>
             <img src={url} alt={` ${title} image`}  className=' w-full  rounded-lg'/>
         </div>
