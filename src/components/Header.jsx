@@ -9,8 +9,8 @@ export const Header= () => {
   const downloadFile=()=>{
       // Create an anchor element dynamically
       const link = document.createElement('a');
-      link.href = "/resume.pdf";
-      link.download = "resume.pdf";
+      link.href = "/Job-resume-1.docx";
+      link.download = "Job-resume-1.docx";
 
       // Simulate a click on the anchor element to initiate download
       link.click();

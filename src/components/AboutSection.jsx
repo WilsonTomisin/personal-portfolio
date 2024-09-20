@@ -1,5 +1,5 @@
 import React,{ useState} from 'react'
-import portfolio from '../assets/portfolio.jpeg'
+import portfolio from '../assets/portfolio-new.jpg'
 import './aboutsection.css';
 import { motion } from 'framer-motion';
 
