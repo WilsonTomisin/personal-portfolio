@@ -54,7 +54,7 @@ const tabs = [
   {name:'Education',
    content: [
       <motion.ul className=' flex-1' variants={boxVariant} initial='hidden' animate='fadeIn'>
-        <motion.li variants={boxItems} className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-semibold text-sm hover:bg-white px-4 py-1 rounded-lg text-slate-950'>Meta Frontend developer </motion.li>
+        <motion.li variants={boxItems} className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-semibold text-sm hover:bg-white px-4 py-1 rounded-lg text-slate-950'>Meta Web developer </motion.li>
         <motion.li variants={boxItems} className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-semibold text-sm hover:bg-white px-4 py-1 rounded-lg text-slate-950'>Complete Web developer course by Kalob Taulin</motion.li>
       </motion.ul>
    ]
@@ -90,7 +90,7 @@ export const AboutSection = () => {
         <div className=' w-full md:w-1/2'>
           <h2 className=' my-4 text-3xl font-semibold text-white text-left '>About Me</h2>
             <p className=' text-white text-sm leading-9 text-left md:text-lg'>
-              Frontend development is where my creative and analytical sides converge.
+              Web development is where my creative and analytical sides converge.
               I find joy in crafting visually appealing and functional websites 
               that not only meet the user's needs but also leave a lasting impression.
               Whether it's coding responsive layouts, enhancing user interfaces
