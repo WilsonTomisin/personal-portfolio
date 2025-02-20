@@ -16,7 +16,7 @@ export const Footer = () => {
             
             <aside className=' '>
                 <div className=' mt-4'>
-                  <h2 className=" text-center">Social Links</h2>
+                  <h2 className=" text-center md:text-left mb-2">Social Links</h2>
                   <ul className=' flex items-center justify-center gap-4 cursor-pointer '>
                     <Link className=' flex items-center gap-2'  to={`https://github.com/WilsonTomisin`}>
                       <BsGithub/>

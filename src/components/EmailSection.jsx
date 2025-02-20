@@ -5,6 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { Link } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 import { SiLinktree } from "react-icons/si";
+import { motion } from 'framer-motion';
 
 
 export const EmailSection = () => {
@@ -52,7 +53,12 @@ export const EmailSection = () => {
   return (
     <section className=' flex flex-col md:flex-row justify-between py-24 relative'>
       <div className=' bg-gradient-radial from-green-700 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-7 transform -translate-x-1/2 '>{' '}</div>
-      <div className=' w-full md:w-1/2 pr-10'>
+      <motion.div 
+      initial={{opacity:0, x:"-70%"}}
+      whileInView={{opacity:1, x:"0%"}}
+      viewport={{once:true}}
+      transition={{duration:1.5, type:"spring"}}
+      className=' w-full md:w-1/2 pr-10'>
         <h1 className=' text-3xl font-bold text-white'>Contact Me</h1>
         <p className='  py-3 text-base text-gray-400'>
           I&apos;m currently loooking for new
@@ -67,8 +73,13 @@ export const EmailSection = () => {
 
           
         </div>
-      </div>
-      <div className=' w-full md:w-1/2 py-20 md:py-0'>
+      </motion.div>
+      <motion.div 
+      initial={{opacity:0, y:"70%"}}
+      whileInView={{opacity:1, y:"0%"}}
+      viewport={{once:true}}
+      transition={{duration:1.5, type:"spring"}}
+      className=' w-full md:w-1/2 py-20 md:py-0'>
           <form ref={form} onSubmit={handleSubmit} className=' text-white flex flex-col gap-4'>
                   <div className=' mb-5'>
                     <label htmlFor="userName" className=' font-semibold'>Name</label>
@@ -102,7 +113,7 @@ export const EmailSection = () => {
                   </div>
           </form>
           <ToastContainer/>
-      </div>
+      </motion.div>
     </section>
   )
 }

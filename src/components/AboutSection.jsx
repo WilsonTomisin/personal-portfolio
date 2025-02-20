@@ -90,10 +90,20 @@ export const AboutSection = () => {
   },[tabButton])
   return (
     <section className=' flex flex-col md:flex-row  justify-between py-32'>
-        <div className=' h-auto w-full md:w-1/2'>
-            <img src={portfolio} alt='my-porfile-picture'  className=' h-auto w-full md:w-4/6 duration-500 transition-all ease-in-out rounded-lg hover:scale-95'/>
-        </div>
-        <div className=' w-full md:w-1/2'>
+        <motion.div 
+        initial={{opacity:0, scaleY:0}}
+        whileInView={{opacity:1, scaleY:1}}
+        viewport={{once:true}}
+        transition={{duration:1.5, type:"spring"}}
+        className=' h-auto w-full md:w-1/2'>
+            <img src={portfolio} alt='my-porfile-picture'  className=' cursor-pointer h-auto w-full md:w-4/6 duration-500 transition-all ease-in-out rounded-lg hover:scale-95'/>
+        </motion.div>
+        <motion.div 
+        initial={{opacity:0, y:"70%"}}
+        whileInView={{opacity:1, y:"0%"}}
+        viewport={{once:true}}
+        transition={{duration:1.5, type:"spring"}}
+        className=' w-full md:w-1/2'>
           <h2 className=' my-4 text-3xl font-semibold text-white text-left '>About Me</h2>
             <p className=' text-white text-sm leading-9 text-left md:text-lg'>
               Web development is where my creative and analytical sides converge.
@@ -127,7 +137,7 @@ export const AboutSection = () => {
               }
              
             </div>
-        </div>
+        </motion.div>
     </section>
   )
 }

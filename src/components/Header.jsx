@@ -3,6 +3,7 @@ import emoji from '../assets/29 29.png'
 import { TypeAnimation } from 'react-type-animation';
 import { Link } from 'react-router-dom';
 import { MdOutlineCloudDownload } from "react-icons/md";
+import { motion } from 'framer-motion';
 
 
 
@@ -20,8 +21,13 @@ export const Header= () => {
   }
   return (
     <section className=' text-white flex flex-col md:flex-row justify-between py-[30px]'>
-        <div className=' w-full md:w-1/2 text-center md:text-left '>
-            <h1 className=' text-5xl md:text-6xl font-bold text-white  mb-4'>
+        <motion.div 
+        initial={{opacity:0, y:"70%"}}
+        whileInView={{opacity:1, y:"0%"}}
+        viewport={{once:true}}
+        transition={{duration:2.5, type:"spring"}}
+        className=' w-full md:w-1/2 text-center md:text-left '>
+            <h1 className='  text-5xl md:text-6xl font-bold text-white  mb-4'>
                 <span className=' 
                 text-transparent 
                 bg-clip-text bg-gradient-to-r
@@ -29,15 +35,16 @@ export const Header= () => {
               <br />
                 <TypeAnimation
                   sequence={[
-                    'Wilson Oluwatomisin',
+                    'Wilson 😃',
                     2000,
-                    'a Software developer',
+                    'a Software developer 💻👨‍💻',
                     2000,
-                    "a Technical Writer"
+                    "a Technical Writer 📝",
+                    2000
                   ]}
                   wrapper="span"
-                  speed={50}
-                  // style={{ fontSize: '2em', display: 'inline-block' }}
+                  speed={20}
+                  style={{ display:"flex", flexWrap:"wrap" }}
                   repeat={Infinity}
                 />
             </h1>
@@ -55,10 +62,15 @@ export const Header= () => {
                 </span>
               </button>
             </div>
-        </div>
-        <div className=' rounded-full h-64 w-64 mx-auto mt-3 md:mt-0 md:mx-0 bg-slate-700 '>
+        </motion.div>
+        <motion.div 
+        initial={{opacity:0, scaleX:0}}
+        whileInView={{opacity:1, scaleX:1}}
+        viewport={{once:true}}
+        transition={{duration:2.0, type:"spring"}}
+        className=' rounded-full h-64 w-64 mx-auto mt-3 md:mt-0 md:mx-0 bg-slate-700 '>
             <img src={emoji} alt=" emoji character"  className=' w-64 h-64'/>         
-        </div>
+        </motion.div>
     </section>
   )
 }
