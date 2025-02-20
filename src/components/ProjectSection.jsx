@@ -182,7 +182,10 @@ export const ProjectSection = () => {
   return (
     <div >
         <h1 className=' text-center text-4xl font-bold text-white mb-20'>My Projects</h1>
-        <div className=' grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
+        <div 
+        className=' flex items-center gap-5 overflow-x-auto overflow-y-hidden mx-auto max-w-[900px] scrollbar'
+        // className=' grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'
+        >
             {Project_Data.map((project, index)=>{
 
                 return(
