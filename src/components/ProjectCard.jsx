@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 
-export const ProjectCard = ({url,title,description,stack, key, liveURL,repo}) => {
+export const ProjectCard = ({url,title,description,stack, key, liveURL,repo, isPublic}) => {
     // let newKey = key/50
   return (
     <div  key={key} className=' h-[700px] md:h-[500px] w-auto cursor-pointer text-white bg-gradient-to-tr from-transparent to-slate-950 rounded-lg duration-500 transition-all ease-in-out hover:scale-95 '>
@@ -33,10 +33,13 @@ export const ProjectCard = ({url,title,description,stack, key, liveURL,repo}) =>
                     <span>view live</span>
                     <BsEye/>
                 </Link>
-                <Link to={repo} className=' flex items-center gap-3 bg-white text-slate-950 rounded-2xl  px-7 py-2  transition-all duration-700 ease-in-out hover:bg-transparent hover:text-white'>
-                    <span>source code</span>
-                    <BsCodeSlash/>
-                </Link>
+                {
+                    isPublic &&
+                    <Link to={repo} className=' flex items-center gap-3 bg-white text-slate-950 rounded-2xl  px-7 py-2  transition-all duration-700 ease-in-out hover:bg-transparent hover:text-white'>
+                        <span>source code</span>
+                        <BsCodeSlash/>
+                    </Link>
+                }
 
 
             </div>

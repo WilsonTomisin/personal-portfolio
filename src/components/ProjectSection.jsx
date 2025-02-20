@@ -8,7 +8,9 @@ import image5 from '../assets/project5.jpeg';
 import image6 from '../assets/project6.jpeg';
 import image7 from '../assets/project7.png';
 import image8 from '../assets/project8.png'
-import campPrj from "../assets/camp-image.jpg"
+import campPrj from "../assets/camp-image.jpg";
+import theProfast from "../assets/theprofast.jpg";
+import natureborn from "../assets/natureborn.jpg"
 import { SiJavascript,  SiMui} from 'react-icons/si';
 import {AiFillHtml5} from 'react-icons/ai'
 import { BiLogoCss3 ,BiLogoTailwindCss,BiLogoReact, BiLogoFirebase} from 'react-icons/bi';
@@ -23,6 +25,20 @@ export const ProjectSection = () => {
     
     const Project_Data = [
         {
+            // id:300,
+            path: natureborn,
+            title: 'Natureborn Africa ',
+            liveURL:'https://natureborn-africa.vercel.app/',
+            repo:'https://github.com/WilsonTomisin',
+            description: 'A Web app for a Travel and VIP service company',
+            stack:[
+                {name:'React', icon:<BiLogoReact className=' text-blue-600 text-xl '/>},
+                {name:'Tailwindcss',icon:<BiLogoTailwindCss className=' text-blue-300 text-xl'/>},
+                
+            ],
+            isPublic:false
+        },
+        {
             // id:100,
             path: image8,
             title: 'Access medical supplies',
@@ -34,7 +50,21 @@ export const ProjectSection = () => {
                 {name:'Tailwindcss',icon:<BiLogoTailwindCss className=' text-blue-300 text-xl'/>},
                 
             ],
-            isPrivate: true
+            isPublic: false
+        },
+        {
+            // id:100,
+            path: theProfast,
+            title: 'TheProfast Cargo & Logistics',
+            liveURL:'https://theprofast.netlify.app/',
+            repo:'https://github.com/WilsonTomisin',
+            description: 'A web app for a cross border shipping platform ',
+            stack:[
+                {name:'Next js', icon:<SiNextdotjs className=' text-blue-600 text-xl '/>},
+                {name:'Tailwindcss',icon:<BiLogoTailwindCss className=' text-blue-300 text-xl'/>},
+                
+            ],
+            isPublic: false
         },
         {
             // id:200,
@@ -48,7 +78,7 @@ export const ProjectSection = () => {
                 {name:'Tailwindcss',icon:<BiLogoTailwindCss className=' text-blue-300 text-xl'/>},
                 
             ],
-            isPrivate:true
+            isPublic:false
         },
         {
             // id:300,
@@ -62,7 +92,7 @@ export const ProjectSection = () => {
                 {name:'Tailwindcss',icon:<BiLogoTailwindCss className=' text-blue-300 text-xl'/>},
                 
             ],
-            isPrivate:false
+            isPublic:true
         },
         {
             // id:400,
@@ -76,7 +106,7 @@ export const ProjectSection = () => {
                 {name:'Tailwindcss',icon:<BiLogoTailwindCss className=' text-blue-300 text-xl'/>},
                 
             ],
-            isPrivate:false
+            isPublic:true
         },
         {
             // id:400,
@@ -90,7 +120,7 @@ export const ProjectSection = () => {
                 {name:'Tailwindcss', icon:<BiLogoTailwindCss className=' text-blue-300 text-xl'/>},
                 {name:'Firebase', icon:<BiLogoFirebase className=' text-orange-500 text-xl'/>}
             ],
-            isPrivate:false
+            isPublic:true
         },
         {
             // id:500,
@@ -104,7 +134,7 @@ export const ProjectSection = () => {
                 {name:'Tailwindcss', icon:<BiLogoTailwindCss className=' text-blue-300 text-xl'/>},
                 
             ],
-            isPrivate:false
+            isPublic:true
         },
         {
             // id:600,
@@ -118,7 +148,7 @@ export const ProjectSection = () => {
                 {name:'CSS',icon:<BiLogoCss3 className=' text-blue-600 text-xl'/>},
                 {name:'Material UI', icon:<SiMui className=' text-blue-600 text-xl'/>}
             ],
-            isPrivate:false
+            isPublic:true
 
         },
         // {
@@ -153,7 +183,7 @@ export const ProjectSection = () => {
     <div >
         <h1 className=' text-center text-4xl font-bold text-white mb-20'>My Projects</h1>
         <div className=' grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
-            {Project_Data.map((project)=>{
+            {Project_Data.map((project, index)=>{
 
                 return(
                     <>
@@ -162,7 +192,8 @@ export const ProjectSection = () => {
                         stack={project.stack}
                         liveURL={project.liveURL}
                         repo={project.repo}
-                        key={project.id}
+                        key={index}
+                        isPublic={project.isPublic}
                         />
                     </>
                 )
