@@ -2,6 +2,8 @@ import React from 'react'
 import emoji from '../assets/29 29.png'
 import { TypeAnimation } from 'react-type-animation';
 import { Link } from 'react-router-dom';
+import { MdOutlineCloudDownload } from "react-icons/md";
+
 
 
 
@@ -29,8 +31,9 @@ export const Header= () => {
                   sequence={[
                     'Wilson Oluwatomisin',
                     2000,
-                    'a Web developer',
+                    'a Software developer',
                     2000,
+                    "a Technical Writer"
                   ]}
                   wrapper="span"
                   speed={50}
@@ -38,22 +41,23 @@ export const Header= () => {
                   repeat={Infinity}
                 />
             </h1>
-            <p className=' text-gray-400 text-lg mb-6'>
+            <p className=' text-gray-400  mb-6'>
             Hello, and thank you for visiting my portfolio website. 
             I'm  a passionate Web developer 
             on a journey to turn ideas into interactive and user-friendly web experiences.
             </p>
             <div>
-              <a href='mailto:tommywilson972@gmail.com' className=' bg-gradient-to-br from-green-500 via-blue-500 to-blue-950 px-6 py-3 rounded-full mr-4'>Hire Me</a>
               <button onClick={downloadFile} className=' bg-transparent text-white px-1 py-1 rounded-full bg-gradient-to-r
               from-green-500 via-blue-500 to-blue-950 hover:bg-gradient-to-tr '>
-                <span className=' block bg-slate-950 rounded-full px-5 py-2 '>Download CV</span>
+                <span className='  bg-slate-950 rounded-full px-5 py-2 flex items-center gap-2 '>
+                  Download CV
+                  <MdOutlineCloudDownload/>
+                </span>
               </button>
             </div>
         </div>
         <div className=' rounded-full h-64 w-64 mx-auto mt-3 md:mt-0 md:mx-0 bg-slate-700 '>
-            <img src={emoji} alt=" emoji character"  className=' w-64 h-64'/>
-          
+            <img src={emoji} alt=" emoji character"  className=' w-64 h-64'/>         
         </div>
     </section>
   )
