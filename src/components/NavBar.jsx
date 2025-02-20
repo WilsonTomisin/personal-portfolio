@@ -39,7 +39,7 @@ export const NavBar = () => {
                  
                  : <FaBarsStaggered className=' text-3xl' onClick={()=>{setIsOpen(true)}}/>}
             </div>
-            <div className=' bg-gradient-to-r  from-transparent via-slate-700 to-transparent rounded-lg p-5 hidden md:block'>
+            <div className=' bg-gradient-to-r  from-transparent via-slate-900 to-transparent rounded-lg p-5 hidden md:block'>
                 <ul className=' flex flex-row space-x-8'>
                     {linkItems.map((item, index)=>(
                     
@@ -49,7 +49,7 @@ export const NavBar = () => {
                     ))}
                 </ul>
             </div>
-            <a href='mailto:tommywilson972@gmail.com' className=' bg-gradient-to-br from-green-500 via-blue-500 to-blue-950 px-6 py-3 rounded-full mr-4 flex items-center gap-2'>
+            <a href='mailto:tommywilson972@gmail.com' className=' hidden md:flex items-center gap-2 bg-gradient-to-br from-green-500 via-blue-500 to-blue-950 px-6 py-3 rounded-full mr-4 '>
                 Hire Me
                 <MdOutlineWorkOutline/>
             </a>

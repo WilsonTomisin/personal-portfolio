@@ -1,10 +1,11 @@
 import React,{ useRef} from 'react' ;
 import './button.css'
-import { BsGithub,BsTwitter,BsMedium} from 'react-icons/bs';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Link } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
+import { SiLinktree } from "react-icons/si";
+
 
 export const EmailSection = () => {
 
@@ -59,15 +60,12 @@ export const EmailSection = () => {
           say hi, i&apos;ll get back to you.
         </p>
         <div className=' text-white text-2xl flex items-center w-1/2 justify-between'>
-          <Link href={'https://github.com/WilsonTomisin'}>
-            <BsGithub/>
+          <Link to={'https://linktr.ee/WilsonTomisin'} className=' flex gap-2 items-center '>
+            <SiLinktree/>
+            <span className=' underline'>linktree</span>  
           </Link>
-          <Link href={`https://twitter.com/WilsonTomisin`}>
-            <BsTwitter/>
-          </Link>
-          <Link href={`https://twitter.com/WilsonTomisin`}>
-            <BsMedium/>
-          </Link>
+
+          
         </div>
       </div>
       <div className=' w-full md:w-1/2 py-20 md:py-0'>
