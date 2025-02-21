@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 export const ProjectCard = ({url,title,description,stack, key, liveURL,repo, isPublic}) => {
   return (
-    <div  key={key} className=' h-[700px] md:h-[500px] min-w-[400px] cursor-pointer text-white bg-gradient-to-tr from-transparent to-slate-950 rounded-lg duration-500 transition-all ease-in-out hover:scale-95 '>
+    <div  key={key} className='  h-[700px] md:h-[500px] min-w-[400px] cursor-pointer text-white bg-gradient-to-tr from-transparent to-slate-950 opacity-50 rounded-lg duration-500 transition-all ease-in-out hover:scale-95 hover:bg-transparent hover:opacity-100 '>
         <div className=' h-[40%] w-full'>
             <img src={url} alt={` ${title} image`}  className=' w-full h-full  rounded-lg'/>
         </div>

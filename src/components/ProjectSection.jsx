@@ -15,6 +15,7 @@ import { SiJavascript,  SiMui} from 'react-icons/si';
 import {AiFillHtml5} from 'react-icons/ai'
 import { BiLogoCss3 ,BiLogoTailwindCss,BiLogoReact, BiLogoFirebase} from 'react-icons/bi';
 import { SiNextdotjs } from "react-icons/si";
+import { useLocation } from 'react-router-dom';
 
 
 
@@ -22,6 +23,7 @@ import { SiNextdotjs } from "react-icons/si";
 
 
 export const ProjectSection = () => {
+    const { pathname} = useLocation()
     
     const Project_Data = [
         {
@@ -176,16 +178,19 @@ export const ProjectSection = () => {
                 {name:'Tailwindcss',icon:<BiLogoTailwindCss className=' text-blue-300 text-xl'/>},
                 
             ],
-            isPrivate:false
+            isPublic:true
         }
     ]
   return (
     <div >
         <h1 className=' text-center text-4xl font-bold text-white mb-20'>My Projects</h1>
         <div 
-        className=' flex items-center gap-5 overflow-x-auto overflow-y-hidden mx-auto max-w-[900px] scrollbar'
-        // className=' grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'
+        className={ ` ${pathname !== "/projects" ? 
+        " flex items-center gap-5 overflow-x-auto overflow-y-hidden mx-auto max-w-[900px] scrollbar  " 
+        :" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
+        }`}
         >
+            {/* <span className=' flex gap-5 items-center card-slider'>   */}
             {Project_Data.map((project, index)=>{
 
                 return(
@@ -201,6 +206,7 @@ export const ProjectSection = () => {
                     </>
                 )
             })}
+           {/* </span> */}
         </div>
         
     </div>
