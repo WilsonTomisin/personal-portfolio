@@ -24,7 +24,8 @@ import { useLocation } from 'react-router-dom';
 
 export const ProjectSection = () => {
     const { pathname} = useLocation()
-    
+   
+
     const Project_Data = [
         {
             // id:300,
@@ -181,6 +182,7 @@ export const ProjectSection = () => {
             isPublic:true
         }
     ]
+   
   return (
     <div >
         <h1 className=' text-center text-4xl font-bold text-white mb-20'>My Projects</h1>
@@ -202,6 +204,7 @@ export const ProjectSection = () => {
                         repo={project.repo}
                         key={index}
                         isPublic={project.isPublic}
+                        // cardWidth={}
                         />
                     </>
                 )
