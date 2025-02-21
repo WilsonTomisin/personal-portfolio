@@ -31,7 +31,7 @@
 
   /* Custom scrollbar for Firefox */
   .scrollbar {
-    scrollbar-width:auto; /* "auto" or "thin" */
+    scrollbar-width:thin; /* "auto" or "thin" */
     scrollbar-color: lime transparent ; /* thumb and track color */
   }
 }

@@ -2,6 +2,7 @@ import React,{ useState} from 'react'
 import portfolio from '../assets/portfolio-new.jpg'
 import './aboutsection.css';
 import { motion } from 'framer-motion';
+import {GiClick} from "react-icons/gi" ;
 
 
 
@@ -42,24 +43,24 @@ const tabs = [
   {name:'Skills',
    content:[
     <motion.ul variants={boxVariant} initial='hidden' animate='fadeIn'>
-      <motion.li variants={boxItems} className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-semibold text-sm hover:bg-white px-4 py-1 rounded-lg text-slate-950'>React.js</motion.li>
-      <motion.li variants={boxItems} className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-semibold text-sm hover:bg-white px-4 py-1 rounded-lg text-slate-950'>Next.js</motion.li>
-      <motion.li variants={boxItems} className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-semibold text-sm hover:bg-white px-4 py-1 rounded-lg text-slate-950'>Node.js</motion.li>
-      <motion.li  variants={boxItems} className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-semibold text-sm hover:bg-white px-4 py-1 rounded-lg text-slate-950'>Express js</motion.li>
-      <motion.li  variants={boxItems} className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-semibold text-sm hover:bg-white px-4 py-1 rounded-lg text-slate-950'>Nest js</motion.li>
-      <motion.li  variants={boxItems} className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-semibold text-sm hover:bg-white px-4 py-1 rounded-lg text-slate-950'>JWT Authentication</motion.li>
-      <motion.li  variants={boxItems} className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-semibold text-sm hover:bg-white px-4 py-1 rounded-lg text-slate-950'>Mongo DB</motion.li>
-      <motion.li variants={boxItems} className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-semibold text-sm hover:bg-white px-4 py-1 rounded-lg text-slate-950'>Javascript</motion.li>
-      <motion.li variants={boxItems} className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-semibold text-sm hover:bg-white px-4 py-1 rounded-lg text-slate-950'>Typescript</motion.li>
-      <motion.li  variants={boxItems} className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-semibold text-sm hover:bg-white px-4 py-1 rounded-lg text-slate-950'>Version control(GIT)</motion.li>
-      <motion.li variants={boxItems} className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-semibold text-sm hover:bg-white px-4 py-1 rounded-lg text-slate-950'>Framer motion</motion.li>
-      <motion.li  variants={boxItems} className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-semibold text-sm hover:bg-white px-4 py-1 rounded-lg text-slate-950'>Tailwind Css</motion.li>
+      <motion.li variants={boxItems} className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-medium text-xs px-4 py-1 rounded-lg text-slate-950'>React.js</motion.li>
+      <motion.li variants={boxItems} className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-medium text-xs px-4 py-1 rounded-lg text-slate-950'>Next.js</motion.li>
+      <motion.li variants={boxItems} className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-medium text-xs px-4 py-1 rounded-lg text-slate-950'>Node.js</motion.li>
+      <motion.li  variants={boxItems} className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-medium text-xs px-4 py-1 rounded-lg text-slate-950'>Express js</motion.li>
+      <motion.li  variants={boxItems} className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-medium text-xs px-4 py-1 rounded-lg text-slate-950'>Nest js</motion.li>
+      <motion.li  variants={boxItems} className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-medium text-xs px-4 py-1 rounded-lg text-slate-950'>JWT Authentication</motion.li>
+      <motion.li  variants={boxItems} className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-medium text-xs px-4 py-1 rounded-lg text-slate-950'>Mongo DB</motion.li>
+      <motion.li variants={boxItems} className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-medium text-xs px-4 py-1 rounded-lg text-slate-950'>Javascript</motion.li>
+      <motion.li variants={boxItems} className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-medium text-xs px-4 py-1 rounded-lg text-slate-950'>Typescript</motion.li>
+      <motion.li  variants={boxItems} className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-medium text-xs px-4 py-1 rounded-lg text-slate-950'>Version control(GIT)</motion.li>
+      <motion.li variants={boxItems} className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-medium text-xs px-4 py-1 rounded-lg text-slate-950'>Framer motion</motion.li>
+      <motion.li  variants={boxItems} className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-medium text-xs px-4 py-1 rounded-lg text-slate-950'>Tailwind Css</motion.li>
     </motion.ul>
    ]},
   {name:'Education',
    content: [
       <motion.ul className=' flex-1' variants={boxVariant} initial='hidden' animate='fadeIn'>
-        <motion.li variants={boxItems} className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-semibold text-sm hover:bg-white px-4 py-1 rounded-lg text-slate-950'>Meta Web developer </motion.li>
+        <motion.li variants={boxItems} className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-medium text-xs  px-4 py-1 rounded-lg text-slate-950'>Meta Web developer </motion.li>
         {/* <motion.li variants={boxItems} className=' bg-green-500 cursor-pointer duration-100 transition-colors ease-in-out mb-3 font-semibold text-sm hover:bg-white px-4 py-1 rounded-lg text-slate-950'>Complete Web developer course by Kalob Taulin</motion.li> */}
       </motion.ul>
    ]
@@ -69,10 +70,10 @@ const tabs = [
     content:[
       <motion.ul variants={boxVariant} initial='hidden' animate='fadeIn'>
         {/* <motion.li variants={boxItems} className=' bg-green-500 cursor-pointer mb-3 font-semibold text-sm duration-100 transition-colors ease-in-out  hover:bg-white px-4 py-1 rounded-lg text-slate-950'>HNG intern 2023</motion.li> */}
-        <motion.li variants={boxItems} className=' bg-green-500 cursor-pointer mb-3 font-semibold text-sm duration-100 transition-colors ease-in-out  hover:bg-white px-4 py-1 rounded-lg text-slate-950'>Lead Developer @kuttinedgeresources.com</motion.li>
-        <motion.li variants={boxItems} className=' bg-green-500 cursor-pointer mb-3 font-semibold text-sm duration-100 transition-colors ease-in-out  hover:bg-white px-4 py-1 rounded-lg text-slate-950'> Lead Developer @accessmedsupplies.com</motion.li>
-        <motion.li variants={boxItems} className=' bg-green-500 cursor-pointer mb-3 font-semibold text-sm duration-100 transition-colors ease-in-out  hover:bg-white px-4 py-1 rounded-lg text-slate-950'>Lead Developer @naturebornafrica.com</motion.li>
-        <motion.li variants={boxItems} className=' bg-green-500 cursor-pointer mb-3 font-semibold text-sm duration-100 transition-colors ease-in-out  hover:bg-white px-4 py-1 rounded-lg text-slate-950'>Lead Developer @theprofast.com</motion.li>
+        <motion.li variants={boxItems} className=' bg-green-500 cursor-pointer mb-3 font-medium text-xs duration-100 transition-colors ease-in-out  px-4 py-1 rounded-lg text-slate-950'>Lead Developer @kuttinedgeresources.com</motion.li>
+        <motion.li variants={boxItems} className=' bg-green-500 cursor-pointer mb-3 font-medium text-xs duration-100 transition-colors ease-in-out  px-4 py-1 rounded-lg text-slate-950'> Lead Developer @accessmedsupplies.com</motion.li>
+        <motion.li variants={boxItems} className=' bg-green-500 cursor-pointer mb-3 font-medium text-xs duration-100 transition-colors ease-in-out  px-4 py-1 rounded-lg text-slate-950'>Lead Developer @naturebornafrica.com</motion.li>
+        <motion.li variants={boxItems} className=' bg-green-500 cursor-pointer mb-3 font-medium text-xs duration-100 transition-colors ease-in-out  px-4 py-1 rounded-lg text-slate-950'>Lead Developer @theprofast.com</motion.li>
 
       </motion.ul>
     ]
@@ -96,7 +97,7 @@ export const AboutSection = () => {
         viewport={{once:true}}
         transition={{duration:1.5, type:"spring"}}
         className=' h-auto w-full md:w-1/2'>
-            <img src={portfolio} alt='my-porfile-picture'  className=' cursor-pointer h-auto w-full md:w-4/6 duration-500 transition-all ease-in-out rounded-lg hover:scale-95'/>
+            <img src={portfolio} alt='my-porfile-picture'  className=' cursor-pointer h-auto w-full mx-auto md:w-4/6 duration-500 transition-all ease-in-out rounded-lg hover:scale-95'/>
         </motion.div>
         <motion.div 
         initial={{opacity:0, y:"70%"}}
@@ -114,7 +115,7 @@ export const AboutSection = () => {
               I'm always eager to learn and grow.This portfolio is a showcase of my projects,
               skills, and dedication to my craft. Take a tour through the projects I've worked on .
             </p>
-            <div className=' w-1/2 flex flex-row  mt-8  text-slate-600'>
+            <div className=' w-full flex flex-col md:flex-row justify-start  md:justify-between  mt-8  text-slate-600'>
 
               {
                 tabs.map((tab, index)=>{
@@ -124,9 +125,10 @@ export const AboutSection = () => {
                       <div className=' flex flex-col' key={index}>
                           <button value={tab.name}
                           onClick={(e)=>setTabButton(e.currentTarget.value)}
-                          className={`skills-btn mr-3 font-semibold px-3  ${activeBtn}`}
+                          className={`skills-btn mr-3 font-semibold px-3 flex items-center gap-2  ${activeBtn}`}
                           >
-                          {tab.name}
+                            {tab.name}
+                            <GiClick/>
                           </button>
                           <div className=' mt-5 '>
                             {active && tab.content}

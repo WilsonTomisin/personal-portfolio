@@ -24,14 +24,13 @@ export const NavBar = () => {
     <nav className=' z-50 px-8 py-7 text-white fixed top-0 left-0 right-0 bg-transparent'>
         <div className=' flex flex-wrap items-center justify-between'>
             <Link to={'/'} className=' font-bold text-3xl'>
-                    <motion.text x="10" y="40" 
-                    font-family="Arial" font-size="44" fill="white"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.5, duration: 0.5 }}
+                    <motion.div  
+                    initial={{ opacity: 0, scaleY:0 }}
+                    whileInView={{ opacity: 1, scaleY:1 }}
+                    transition={{ delay: 0.5, duration: 1.5 }}
                     >
                         <img src={logo} alt=" my logo" className=' w-14 h-14'/>
-                    </motion.text>
+                    </motion.div>
             </Link>
             <div className=' block md:hidden '>
                 {isOpen ?

@@ -27,7 +27,7 @@ export const Header= () => {
         viewport={{once:true}}
         transition={{duration:2.5, type:"spring"}}
         className=' w-full md:w-1/2 text-center md:text-left '>
-            <h1 className='  text-5xl md:text-6xl font-bold text-white  mb-4'>
+            <h1 className='  text-4xl md:text-6xl font-bold text-white  mb-4'>
                 <span className=' 
                 text-transparent 
                 bg-clip-text bg-gradient-to-r
@@ -35,7 +35,7 @@ export const Header= () => {
               <br />
                 <TypeAnimation
                   sequence={[
-                    'Wilson 😃',
+                    'Wilson Oluwatomisin',
                     2000,
                     'a Software developer 💻👨‍💻',
                     2000,
@@ -48,7 +48,7 @@ export const Header= () => {
                   repeat={Infinity}
                 />
             </h1>
-            <p className=' text-gray-400  mb-6'>
+            <p className=' text-gray-400 text-sm  mb-6'>
             Hello, and thank you for visiting my portfolio website. 
             I'm  a passionate Web developer 
             on a journey to turn ideas into interactive and user-friendly web experiences.
